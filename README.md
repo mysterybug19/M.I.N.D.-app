@@ -13,7 +13,7 @@ The application uses a trained machine learning model to provide probabilistic i
 * Obsessive-Compulsive Disorder (OCD)
 * Schizophrenia
 
-⚠️ **Disclaimer:** This tool is for informational purposes only and does not provide medical diagnosis.
+**Disclaimer:** This tool is for informational purposes only and does not provide medical diagnosis.
 
 ---
 
@@ -65,7 +65,7 @@ It was created to simulate realistic symptom patterns across multiple mental hea
 * prototyping
 * model training demonstrations
 
-⚠️ Because the dataset is synthetic, predictions **should not be considered clinically accurate**.
+Because the dataset is synthetic, predictions **should not be considered clinically accurate**.
 
 ---
 
@@ -161,22 +161,6 @@ This application:
 * Is intended for **educational and experimental purposes only**
 
 If you experience severe symptoms or distress, consult a licensed professional.
-
----
-
-## Future Improvements
-
-* Export results as PDF
-* Improve dataset realism and diversity
-* Enhance model accuracy
-* Mobile UI optimization
-* Cloud deployment
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
 
 ---
 
