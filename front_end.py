@@ -142,15 +142,15 @@ if "answers" not in st.session_state:
 @st.cache_resource
 def load_model():
     base = os.path.dirname(os.path.abspath(__file__))
-    reg = joblib.load(os.path.join(base, "model.joblib"))
+    models = joblib.load(os.path.join(base, "model.joblib"))
     feature_cols = joblib.load(os.path.join(base, "feature.joblib"))
     label_cols = joblib.load(os.path.join(base, "label.joblib"))
     map_education = {'Fără studii': 1, 'Școală generală': 2, 'Liceu': 3, 'Studii superioare': 4, 'Doctorat/Master avansat': 5}
     map_gender = {'Female': 0, 'Male': 1, 'Other': 2}
     map_job = {'Retired': 0, 'Employed': 1, 'Student': 2, 'Unemployed': 3, 'Disabled': 4}
-    return reg, feature_cols, label_cols, map_education, map_gender, map_job
+    return models, feature_cols, label_cols, map_education, map_gender, map_job
 
-reg, feature_cols, label_cols, map_education, map_gender, map_job = load_model()
+models, feature_cols, label_cols, map_education, map_gender, map_job = load_model()
 
 def render_question(q):
     st.subheader(q["label"])
