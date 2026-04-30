@@ -122,8 +122,13 @@ def predict(answers):
             row[key] = val
 
     df_test = pd.DataFrame([row], columns=feature_cols)
-    probs   = reg.predict_proba(df_test)
-    return {key: probs[i][0][1] * 100 for i, key in enumerate(labels_info.keys())}
+    results = {}
+
+    for label_key, model in models.items():
+        prob = model.predict_proba(df_test)[0][1]
+        results[label_key] = prob * 100
+        
+    return results
 
 st.set_page_config(page_title="M.I.N.D.")
 
